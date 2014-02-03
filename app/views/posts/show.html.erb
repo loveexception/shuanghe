@@ -1,0 +1,17 @@
+
+<%= render :partial => @post %>
+
+<% @post.comments.each do |comment| %>
+	<strong>comment at <%= time_ago_in_words (comment.created_at ) %></strong>
+	<p><%= comment.content %></p>
+<% end %>
+<%= form_for [ @post , Comment.new ] do |f| %>
+	<p>
+		
+		<%= f.label  :content ,"New Comment" %>
+		<%= f.text_area :content %>
+	</p>
+	<P> <%= f.submit "add "%></P>
+<% end -%>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
