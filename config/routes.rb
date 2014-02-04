@@ -1,5 +1,6 @@
 Shuanghe::Application.routes.draw do
-
+  get "my/home"
+  get "my/help"
 
   resources :posts do 
     resources :comments
