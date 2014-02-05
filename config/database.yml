@@ -4,30 +4,27 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'mysql2'
 development:
-  adapter: mysql2
-  database: development_shuanghe
-  pool: 5
-  username: maodajun
-  password: maodajun
+  host: localhost
+  adapter: postgresql
   encoding: utf8
-  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+  database: sample_project_development
+  pool: 5
+  username: 
+  password: 
+
 test:
-  adapter: mysql2
-  database: test_shuanghe
-  pool: 5
-  username: maodajun
-  password: maodajun
+  host: localhost
+  adapter: postgresql
   encoding: utf8
-  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock 
+  database: sample_project_test
+  pool: 5
+  username: 
+  password: 
 
 production:
-  adapter: mysql2
-  database: production_shuanghe
-  pool: 5
-  username: maodajun
-  password: maodajun
+  adapter: postgresql
   encoding: utf8
-  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock 
+  database: sample_project_production
+  pool: 5
+  username:
+  password:
